@@ -24,6 +24,7 @@ We use Docker mount to let the container have access to a directory so it will b
 
 In above command we use:
 
+* `ctrader.console.run.mybot`: Container name, you can use any name
 * `/cAlgo/Robots`: Path in host that will be mounted to container
 * `/mnt/Robots`: Container mount path
 * `CTID='mycid'`: Your cId username
@@ -35,7 +36,9 @@ In above command we use:
 * `/mnt/Robots/My bot.algo`: Your cBot algo file path according to mount path
 * `environment-variables`: We use the to let cTrader console know it should use environment variables for getting its parameters
 
-You can also use this image to build another docker image with your cBot algo and cID password file that can be run easily anywhere. 
+In above command we used Docker mount to let container have access to our cBot algo file and cID password file, instead you can also use `-volume` or build another docker file based on console image and copy your algo files and set environment variables directly inside your docker file.
+
+For more regarding Docker mount and volume please check Docker documentation.
 
 You can use all of the cTrader console commands like backtest, for more regarding available features in cTrader Console please check the documentation.
 
