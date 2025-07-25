@@ -44,7 +44,7 @@ You can use all of the cTrader console commands like backtest, for more regardin
 
 ## Tags
 
-We use latest for latets available version, to use specific version you can pull it by using the version as tag, ex:
+We use latest for latest available version, to use specific version you can pull it by using the version as tag, ex:
 
 ```
 docker pull ghcr.io/spotware/ctrader-console:5.4
