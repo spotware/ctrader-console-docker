@@ -45,4 +45,4 @@ docker pull ghcr.io/spotware/ctrader-console:5.4
 
 ## Useful Links
 
-[cTrader CLI Documentation]([/guides/content/editing-an-existing-page](https://help.ctrader.com/ctrader-algo/ctrader-cli/))
+[cTrader CLI Documentation](https://help.ctrader.com/ctrader-algo/ctrader-cli/)
