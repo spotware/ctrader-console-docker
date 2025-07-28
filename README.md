@@ -27,14 +27,14 @@ In above command we use:
 * `ctrader.console.run.mybot`: Container name, you can use any name
 * `/cAlgo/Robots`: Path in host that will be mounted to container
 * `/mnt/Robots`: Container mount path
-* `CTID='mycid'`: Your cId username
+* `CTID='mycid'`: Your cID username
 * `/mnt/Robots/ctrader-cli.pwd`: Your cID password file path according to mount path
 * `ACCOUNT='9102302'`: Your trading account number
 * `SYMBOL='EURUSD'`: Symbol that cBot will run on
-* `PERIOD='H1'`: Timeframe that cBot will rub on
+* `PERIOD='H1'`: Timeframe that cBot will run on
 * `ghcr.io/spotware/ctrader-console:5.4`: Container image name that you pulled, change the tag if you pulled some specific version
 * `/mnt/Robots/My bot.algo`: Your cBot algo file path according to mount path
-* `environment-variables`: We use the to let cTrader console know it should use environment variables for getting its parameters
+* `environment-variables`: We use this parameter to let cTrader console know it should use environment variables for getting its parameters
 
 In above command we used Docker mount to let container have access to our cBot algo file and cID password file, instead you can also use `-volume` or build another docker file based on console image and copy your algo files and set environment variables directly inside your docker file.
 
