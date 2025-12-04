@@ -2,7 +2,7 @@
 
 ## About this Image
 
-This official container images for cTrader Console on Linux for Docker Engine.
+This is official container images for cTrader Console on Linux for Docker Engine.
 
 ## How to use this Image
 
@@ -38,7 +38,7 @@ In above command we use:
 * `ACCOUNT='9102302'`: Your trading account number
 * `SYMBOL='EURUSD'`: Symbol that cBot will run on
 * `PERIOD='H1'`: Timeframe that cBot will run on
-* `ghcr.io/spotware/ctrader-console:5.4`: Container image name that you pulled, change the tag if you pulled some specific version
+* `ghcr.io/spotware/ctrader-console:latest`: Container image name, change the tag if you want to use some specific version
 * `/mnt/Robots/My bot.algo`: Your cBot algo file path according to mount path
 * `environment-variables`: We use this parameter to let cTrader console know it should use environment variables for getting its parameters
 
