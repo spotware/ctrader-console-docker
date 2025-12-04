@@ -14,10 +14,16 @@ Pull:
 docker pull ghcr.io/spotware/ctrader-console:5.4
 ```
 
-Run:
+Run cBot:
 
 ```
-docker run -d -it --name ctrader.console.run.mybot --mount type=bind,src=/cAlgo/Robots,dst=/mnt/Robots -e CTID='mycid' -e PWD-FILE='/mnt/Robots/ctrader-cli.pwd' -e ACCOUNT='9102302' -e SYMBOL='EURUSD' -e PERIOD='H1' ghcr.io/spotware/ctrader-console:5.4 run "/mnt/Robots/My bot.algo" --environment-variables
+docker run -d -it --name ctrader.console.run.mybot --mount type=bind,src=/cAlgo/Robots,dst=/mnt/Robots -e CTID='mycid' -e PWD-FILE='/mnt/Robots/ctrader-cli.pwd' -e ACCOUNT='9102302' -e SYMBOL='EURUSD' -e PERIOD='H1' ghcr.io/spotware/ctrader-console:latest run "/mnt/Robots/My bot.algo" --environment-variables
+```
+
+Backtest cBot:
+
+```
+docker run -d -it --name ctrader.console.run.mybot --mount type=bind,src=/cAlgo/Robots,dst=/mnt/Robots -e CTID='mycid' -e PWD-FILE='/mnt/Robots/ctrader-cli.pwd' -e ACCOUNT='9102302' -e SYMBOL='EURUSD' -e PERIOD='H1' -e START="01/01/2025" -e END="01/02/2025" -e DATA-MODE='m1' -e BALANCE='10000' -e COMMISSION='15' -e SPREAD='1' -e REPORT='/mnt/Robots/report.html' -e REPORT-JSON='/mnt/Robots/report.json' ghcr.io/spotware/ctrader-console:latest backtest "/mnt/Robots/Sample Breakout cBot.algo" --environment-variables --full-access
 ```
 
 We use Docker mount to let the container have access to a directory so it will be able to run the cBot algo file.
