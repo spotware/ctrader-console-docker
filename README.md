@@ -11,7 +11,7 @@ You can run cTrader console by pulling this image and then running it.
 Pull:
 
 ```
-docker pull ghcr.io/spotware/ctrader-console:5.4
+docker pull ghcr.io/spotware/ctrader-console:latest
 ```
 
 Run cBot:
